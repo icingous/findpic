@@ -1,0 +1,77 @@
+$border-radius: .812rem;
+
+.query{
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: calc(100% - 20px);
+  font-size: .875rem;
+}
+
+.query__input{
+  flex-basis: 29rem;
+  max-width: 29rem;
+  margin-right: .875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  border: 2px solid $color-query-border;
+  outline: none;
+  transition: all 0.1s;
+
+  &::placeholder{
+    font-size: .625rem;
+    color: $color-placeholder;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 10px rgba(1, 2, 2, 0.1);
+  }
+}
+
+.query__submit{
+  width: 5.25rem;
+  min-width: 5.25rem;
+  padding: 0;
+}
+
+.query-next{
+  padding: 0 1rem;
+  font-size: .875rem;
+}
+
+.query__submit, 
+.query-next{
+  @include border-radius($border-radius);
+  height: 1.625rem;
+  font-family: $font-alt;
+  line-height: 1.5;
+  background-color: $color-fav;
+  color: $color-alt;
+  outline: none;
+  transition: all 0.1s;
+
+  &::first-letter{
+    text-transform: uppercase;
+  }
+}
+
+.query__submit:hover, 
+.query-next:hover{
+  box-shadow: 0 4px 10px rgba(1, 2, 2, 0.2);
+}
+
+.query__submit:focus, 
+.query-next:focus{
+  box-shadow: 0 4px 10px rgba(1, 2, 2, 0.3);
+  text-shadow: 0 1px 1px olive;
+}
+
+.query__submit:active, 
+.query-next:active{
+  box-shadow: inset 0 4px 3px rgba(1, 2, 2, 0.1);
+  text-shadow: 0 1px 1px olive;
+  background-color: darken($color-fav, 7%);
+}
