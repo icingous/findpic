@@ -36,12 +36,13 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: { name: "img/[name].[ext]" },
-          },
-        ],
+        // use: [
+        //   {
+        //     loader: "file-loader",
+        //     options: { name: "img/[name].[ext]" },
+        //   },
+        // ],
+        type: "asset/resource",
       },
       {
         test: /\.hbs$/,
